@@ -24,7 +24,7 @@ namespace BDSA2020.Assignment02.Tests
         }
 
         [Fact]
-        public void TestName()
+        public void FilterBy7and42_given_list_7_19_35_42_49_54_67_70_71_returns_49_70()
         {
             //Arrange
             int[] expected = {49, 70};
@@ -32,6 +32,20 @@ namespace BDSA2020.Assignment02.Tests
             
             //Act
             var actual = list.FilterBy7and42();
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void FilterLeapYears_returns_leapyea()
+        {
+            //Arrange
+            int[] expected = {1784, 1864};
+            int[] list = {1601, 1962, 2065, 1784, 1829, 1864, 2121, 2021, 2018};
+            
+            //Act
+            var actual = list.FilterLeapYears();
 
             //Assert
             Assert.Equal(expected, actual);
