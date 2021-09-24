@@ -27,8 +27,8 @@ namespace BDSA2020.Assignment02.Tests
         public void TestName()
         {
             //Arrange
-            var expected = {49, 70};
-            var list = {7, 19, 35, 42, 49, 54, 67, 70, 71}
+            int[] expected = {49, 70};
+            int[] list = {7, 19, 35, 42, 49, 54, 67, 70, 71};
             
             //Act
             var actual = list.FilterBy7and42();
