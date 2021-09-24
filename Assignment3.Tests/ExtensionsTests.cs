@@ -8,16 +8,33 @@ namespace BDSA2020.Assignment02.Tests
     {
         [Fact]
         public void flatten_given_List_123_456_789_return_123456789()
-        {
+        {   
+            //Arrange
             var expected = new List<int> {1,2,3,4,5,6,7,8,9};
             var list1 = new List<int>() {1,2,3};
             var list2 = new List<int>() {4,5,6};
             var list3 = new List<int>() {7,8,9};
             var list = new List<int>[] {list1, list2, list3};
 
+            //Act
             var actual = list.Flatten();
 
+            //Assert
             Assert.Equal(expected, actual);   
+        }
+
+        [Fact]
+        public void TestName()
+        {
+            //Arrange
+            var expected = {49, 70};
+            var list = {7, 19, 35, 42, 49, 54, 67, 70, 71}
+            
+            //Act
+            var actual = list.FilterBy7and42();
+
+            //Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
