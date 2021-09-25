@@ -12,10 +12,12 @@ namespace BDSA2020.Assignment02.Tests
             //Arrange
             var expected = "fedcba";
             var input = "abcdef";
+
             //Act
-            //Func<string, string> reverse = (s) => new string(s.Reverse().ToArray());
-            Func<string, string> reverse = delegate (string s) { return new string(s.Reverse().ToArray()); }; 
-            var actual = reverse(input);
+            //Func<string, string> Reverse = (s) => new string(s.Reverse().ToArray());
+            Func<string, string> Reverse = delegate (string s) { return new string(s.Reverse().ToArray()); }; 
+            var actual = Reverse(input);
+
             //Assert
             Assert.Equal(expected, actual);
         }
@@ -27,12 +29,28 @@ namespace BDSA2020.Assignment02.Tests
             var expected = 8;
 
             //Act
-            //Func<int, int, int> multiply = (a, b) => a * b;
-            Func<int, int, int> multiply = delegate (int a, int b) {return a * b; };
-            var actual = multiply(2, 4);
+            //Func<int, int, int> Multiply = (a, b) => a * b;
+            Func<int, int, int> Multiply = delegate (int a, int b) {return a * b; };
+            var actual = Multiply(2, 4);
 
             //Assert
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void NumericCheck_given_0042_and_42_return_true()
+        {
+            //Arrange
+            var inputString = "0042";
+            var inputInt = 42;
+            
+            //Act
+            //Func<string, int, bool> NumericCheck = (s, i) => int.Parse(s) == i;
+            Func<string, int, bool> NumericCheck = delegate (string s, int i) {return int.Parse(s) == i; };
+            var actual = NumericCheck(inputString, inputInt);
+
+            //Assert
+            Assert.True(actual);
         }
     }
 }
