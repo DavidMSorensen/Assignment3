@@ -13,7 +13,8 @@ namespace BDSA2020.Assignment02.Tests
             var expected = "fedcba";
             var input = "abcdef";
             //Act
-            Func<string, string> reverse = (s) => new string(s.Reverse().ToArray());
+            //Func<string, string> reverse = (s) => new string(s.Reverse().ToArray());
+            Func<string, string> reverse = delegate (string s) { return new string(s.Reverse().ToArray()); }; 
             var actual = reverse(input);
             //Assert
             Assert.Equal(expected, actual);
@@ -26,7 +27,8 @@ namespace BDSA2020.Assignment02.Tests
             var expected = 8;
 
             //Act
-            Func<int, int, int> multiply = (a, b) => a * b;
+            //Func<int, int, int> multiply = (a, b) => a * b;
+            Func<int, int, int> multiply = delegate (int a, int b) {return a * b; };
             var actual = multiply(2, 4);
 
             //Assert
