@@ -18,5 +18,19 @@ namespace BDSA2020.Assignment02.Tests
             //Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Multiply_take_two_decimals_return_product()
+        {
+            //Arrange
+            var expected = 8;
+
+            //Act
+            Func<int, int, int> multiply = (a, b) => a * b;
+            var actual = multiply(2, 4);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
