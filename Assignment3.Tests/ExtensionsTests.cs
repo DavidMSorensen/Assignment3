@@ -39,7 +39,7 @@ namespace BDSA2020.Assignment02.Tests
 
 
         [Fact]
-        public void FilterLeapYears_returns_leapyea()
+        public void FilterLeapYears_returns_leapyear()
         {
             //Arrange
             int[] expected = {1784, 1864};
@@ -78,5 +78,21 @@ namespace BDSA2020.Assignment02.Tests
             //Assert
             Assert.False(isFalse);
         }
+
+        [Fact]
+        public void WordCount_Given_2_words_with_unicode_letters_and_1_word_without_returns_2()
+        {
+            //Arrange
+            var input = "these are w@rds";
+            int expected = 2;
+
+            //Act
+            var actual = input.WordCount();
+
+
+            //Assert
+            Assert.Equal(expected,actual);
+        }
+
     }
 }
