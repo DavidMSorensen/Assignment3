@@ -33,5 +33,9 @@ namespace BDSA2020.Assignment02
         public static IEnumerable<(string, int)> HarryPotterWizards(){
             throw new NotImplementedException();
         }
+
+        public static IEnumerable<string> ListWizardsInFunnyOrder(){
+            throw new NotImplementedException();
+        }
     }
 }
