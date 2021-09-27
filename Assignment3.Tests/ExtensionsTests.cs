@@ -39,7 +39,7 @@ namespace BDSA2020.Assignment02.Tests
 
 
         [Fact]
-        public void FilterLeapYears_returns_leapyea()
+        public void FilterLeapYears_returns_leapyear()
         {
             //Arrange
             int[] expected = {1784, 1864};
