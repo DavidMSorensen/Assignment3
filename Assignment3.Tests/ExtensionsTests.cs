@@ -56,23 +56,27 @@ namespace BDSA2020.Assignment02.Tests
         [Fact]
         public void IsSecure_returns_true()
         {
-        //Arrange
-        var url = new Uri("https://docs.microsoft.com/");
-        //Act
-        var isTrue = url.IsSecure();
-        //Assert
-        Assert.True(isTrue);
+            //Arrange
+            var url = new Uri("https://docs.microsoft.com/");
+            
+            //Act
+            var isTrue = url.IsSecure();
+            
+            //Assert
+            Assert.True(isTrue);
         }
         
         [Fact]
         public void IsSecure_returns_false()
         {
-        //Arrange
-        var url = new Uri("http://docs.microsoft.com/");
-        //Act
-        var isFalse = url.IsSecure();
-        //Assert
-        Assert.False(isFalse);
+            //Arrange
+            var url = new Uri("http://docs.microsoft.com/");
+            
+            //Act
+            var isFalse = url.IsSecure();
+            
+            //Assert
+            Assert.False(isFalse);
         }
 
         [Fact]
