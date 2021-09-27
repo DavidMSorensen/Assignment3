@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace BDSA2020.Assignment02
 {
@@ -13,5 +14,7 @@ namespace BDSA2020.Assignment02
         public static IEnumerable<int> FilterLeapYears(this int[] ys) => ys.Where(i => DateTime.IsLeapYear(i));
 
         public static bool IsSecure(this Uri u) => u.ToString().Contains("https");
+        
+        public static int WordCount(this string s) => Regex.Split(s, @"\P{L}+").Length;
     }
 }
