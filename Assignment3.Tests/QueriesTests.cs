@@ -7,15 +7,14 @@ namespace BDSA2020.Assignment02.Tests
     public class QueriesTests
     {
         [Fact]
-        public void printRowlig_returns_names_of_wizards_made_by_Rowling()
+        public void GetRowling_returns_names_of_wizards_made_by_Rowling()
         {
             //Arrange
-            string[] actual;
-            string[] expected = {"Harry Potter", "Hermione Granger", "Gandalf", "Ronald Weasley", "Voldemort"};
+            string[] expected = {"Harry Potter", "Hermione Granger", "Ronald Weasley", "Voldemort"};
 
 
             //Act
-            actual = Queries.printRowling();
+            var actual = Queries.GetWizardsByRowling();
 
 
             //Assert
@@ -23,16 +22,13 @@ namespace BDSA2020.Assignment02.Tests
         }
 
         [Fact]
-        public void yearOfTheFirstSithLord_returns_1977()
+        public void YearOfTheFirstSithLord_returns_1977()
         {
             //Arrange
-            int actual;
-            int expected = 1977;
-
+            var expected = 1977;
 
             //Act
-            actual = Queries.yearOfTheFirstSithLord();
-
+            var actual = Queries.YearOfTheFirstSithLord();
 
             //Assert
             Assert.Equal(expected, actual);
@@ -42,15 +38,14 @@ namespace BDSA2020.Assignment02.Tests
         public void TestName()
         {
             //Arrange
-            List<(string, int)> actual;
-            var expected = new List<(string, int)>();
+            var expected = new List<(string, int?)>();
             expected.Add(("Harry Potter", 1997));
             expected.Add(("Hermione Granger", 2003));
             expected.Add(("Ronald Weasley", 1997));
             expected.Add(("Voldemort", 1999));
 
             //Act
-            actual = (List<(string, int)>) Queries.HarryPotterWizards();
+            var actual = Queries.HarryPotterWizards();
 
             //Assert
             Assert.Equal(expected, actual);
