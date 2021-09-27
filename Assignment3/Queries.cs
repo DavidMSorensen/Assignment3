@@ -42,6 +42,7 @@ namespace BDSA2020.Assignment02
 
             var gr = repo
                      .Where(c => c.Name.Contains("Darth"))
+                     .OrderBy(c => c.Year)
                      .Select(c => c.Year);
 
             return gr.ElementAt(0);
