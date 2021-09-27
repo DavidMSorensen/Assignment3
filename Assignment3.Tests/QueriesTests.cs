@@ -56,13 +56,20 @@ namespace BDSA2020.Assignment02.Tests
         }
 
         [Fact]
-        public void ListWizardsInFunnyOrder_()
+        public void ListWizardsInReverseOrder_returns_wizards_in_reverse_order()
         {
             //Arrange
-            string[] expected = {"Mickey Mouse", };
+            string[] expected = {
+                "Mickey Mouse", 
+                "Neo", 
+                "Stephen Strange", 
+                "The Wizard of Oz",
+                "Sauron","Gandalf",
+                "Voldemort", "Ronald Weasley", "Hermione Granger", "Harry Potter",
+                "Yoda", "Darth Vader", "Darth Maul", "Darth Plagueis The Wise"};
 
             //Act
-            string[] actual = (string[]) Queries.ListWizardsInFunnyOrder();
+            string[] actual = (string[]) Queries.ListWizardsInReverseOrder();
 
             //Assert
             Assert.Equal(expected, actual);

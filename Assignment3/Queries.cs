@@ -34,7 +34,7 @@ namespace BDSA2020.Assignment02
             throw new NotImplementedException();
         }
 
-        public static IEnumerable<string> ListWizardsInFunnyOrder(){
+        public static IEnumerable<string> ListWizardsInReverseOrder(){
             throw new NotImplementedException();
         }
     }
