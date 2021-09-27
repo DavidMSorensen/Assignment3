@@ -66,7 +66,7 @@ namespace BDSA2020.Assignment02.Tests
                 "The Wizard of Oz",
                 "Sauron","Gandalf",
                 "Voldemort", "Ronald Weasley", "Hermione Granger", "Harry Potter",
-                "Yoda", "Darth Vader", "Darth Maul", "Darth Plagueis The Wise"};
+                "Yoda", "Darth Vader", "Darth Plagueis The Wise", "Darth Maul"};
 
             //Act
             var actual = Queries.ListWizardsInReverseOrder();

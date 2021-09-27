@@ -79,7 +79,13 @@ namespace BDSA2020.Assignment02
         }
 
         public static IEnumerable<string> ListWizardsInReverseOrderLinq(){
-            throw new NotImplementedException();
+            var repo = Wizard.Wizards.Value;
+
+            var gr = repo
+                     .OrderByDescending(c => (c.Creator, c.Name))
+                     .Select(c => c.Name);
+
+            return gr.ToArray();
         }
     }
 }
