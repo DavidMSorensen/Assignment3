@@ -12,10 +12,8 @@ namespace BDSA2020.Assignment02.Tests
             //Arrange
             string[] expected = {"Harry Potter", "Hermione Granger", "Ronald Weasley", "Voldemort"};
 
-
             //Act
             var actual = Queries.GetWizardsByRowling();
-
 
             //Assert
             Assert.Equal(expected, actual);
@@ -35,7 +33,7 @@ namespace BDSA2020.Assignment02.Tests
         }
 
         [Fact]
-        public void TestName()
+        public void HarryPotterWizards_returns_tuples_of_name_and_year_of_wizards_from_Harrpy_Potter_books()
         {
             //Arrange
             var expected = new List<(string, int?)>();
@@ -46,6 +44,26 @@ namespace BDSA2020.Assignment02.Tests
 
             //Act
             var actual = Queries.HarryPotterWizards();
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ListWizardsInReverseOrder_returns_wizards_in_reverse_order()
+        {
+            //Arrange
+            string[] expected = {
+                "Mickey Mouse", 
+                "Neo", 
+                "Stephen Strange", 
+                "The Wizard of Oz",
+                "Sauron","Gandalf",
+                "Voldemort", "Ronald Weasley", "Hermione Granger", "Harry Potter",
+                "Yoda", "Darth Vader", "Darth Maul", "Darth Plagueis The Wise"};
+
+            //Act
+            string[] actual = (string[]) Queries.ListWizardsInReverseOrder();
 
             //Assert
             Assert.Equal(expected, actual);

@@ -56,5 +56,9 @@ namespace BDSA2020.Assignment02
 
             return gr;
         }
+
+        public static IEnumerable<string> ListWizardsInReverseOrder(){
+            throw new NotImplementedException();
+        }
     }
 }
