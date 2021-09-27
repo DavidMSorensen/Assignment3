@@ -59,7 +59,13 @@ namespace BDSA2020.Assignment02
         }
 
         public static IEnumerable<(string, int?)> HarryPotterWizardsLinq(){
-            throw new NotImplementedException();
+            var repo = Wizard.Wizards.Value;
+
+            var gr = repo
+                     .Where(c => c.Medium.Contains("Harry Potter"))
+                     .Select(c => (c.Name, c.Year));
+
+            return gr;
         }
 
         public static IEnumerable<string> ListWizardsInReverseOrder(){
