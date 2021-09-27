@@ -53,7 +53,7 @@ namespace BDSA2020.Assignment02.Tests
         public void ListWizardsInReverseOrder_returns_wizards_in_reverse_order()
         {
             //Arrange
-            string[] expected = {
+             string[] expected = {
                 "Mickey Mouse", 
                 "Neo", 
                 "Stephen Strange", 
@@ -63,7 +63,7 @@ namespace BDSA2020.Assignment02.Tests
                 "Yoda", "Darth Vader", "Darth Maul", "Darth Plagueis The Wise"};
 
             //Act
-            string[] actual = (string[]) Queries.ListWizardsInReverseOrder();
+            var actual = Queries.ListWizardsInReverseOrder();
 
             //Assert
             Assert.Equal(expected, actual);
