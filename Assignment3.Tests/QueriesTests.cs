@@ -14,9 +14,11 @@ namespace BDSA2020.Assignment02.Tests
 
             //Act
             var actual = Queries.GetWizardsByRowling();
+            var actualLinq = Queries.GetWizardsByRowlingLinq();
 
             //Assert
             Assert.Equal(expected, actual);
+            Assert.Equal(expected, actualLinq);
         }
 
         [Fact]
@@ -27,9 +29,11 @@ namespace BDSA2020.Assignment02.Tests
 
             //Act
             var actual = Queries.YearOfTheFirstSithLord();
+            var actualLinq = Queries.YearOfTheFirstSithLordLinq();
 
             //Assert
             Assert.Equal(expected, actual);
+            Assert.Equal(expected, actualLinq);
         }
 
         [Fact]
@@ -44,9 +48,11 @@ namespace BDSA2020.Assignment02.Tests
 
             //Act
             var actual = Queries.HarryPotterWizards();
+            var actualLinq = Queries.HarryPotterWizardsLinq();
 
             //Assert
             Assert.Equal(expected, actual);
+            Assert.Equal(expected, actualLinq);
         }
 
         [Fact]
@@ -64,9 +70,11 @@ namespace BDSA2020.Assignment02.Tests
 
             //Act
             var actual = Queries.ListWizardsInReverseOrder();
+            var actualLinq = Queries.ListWizardsInReverseOrderLinq();
 
             //Assert
             Assert.Equal(expected, actual);
+            Assert.Equal(expected, actualLinq);
         }
     }
 }

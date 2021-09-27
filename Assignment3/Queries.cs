@@ -42,6 +42,7 @@ namespace BDSA2020.Assignment02
 
             var gr = repo
                      .Where(c => c.Name.Contains("Darth"))
+                     .OrderBy(c => c.Year)
                      .Select(c => c.Year);
 
             return gr.ElementAt(0);
@@ -57,6 +58,16 @@ namespace BDSA2020.Assignment02
             return gr;
         }
 
+        public static IEnumerable<(string, int?)> HarryPotterWizardsLinq(){
+            var repo = Wizard.Wizards.Value;
+
+            var gr = repo
+                     .Where(c => c.Medium.Contains("Harry Potter"))
+                     .Select(c => (c.Name, c.Year));
+
+            return gr;
+        }
+
         public static IEnumerable<string> ListWizardsInReverseOrder(){
             var repo = Wizard.Wizards.Value;
 
@@ -65,6 +76,10 @@ namespace BDSA2020.Assignment02
                      select c.Name;
 
             return gr.ToArray();
+        }
+
+        public static IEnumerable<string> ListWizardsInReverseOrderLinq(){
+            throw new NotImplementedException();
         }
     }
 }
