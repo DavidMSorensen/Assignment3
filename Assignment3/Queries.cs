@@ -1,5 +1,7 @@
-using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Collections.Generic;
+
 namespace BDSA2020.Assignment02
 {
     public class Queries
@@ -24,5 +26,12 @@ namespace BDSA2020.Assignment02
             return gr;
         }
 
+        public static int yearOfTheFirstSithLord(){
+            throw new NotImplementedException();
+        }
+
+        public static IEnumerable<(string, int)> HarryPotterWizards(){
+            throw new NotImplementedException();
+        }
     }
 }
