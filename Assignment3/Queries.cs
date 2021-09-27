@@ -75,7 +75,7 @@ namespace BDSA2020.Assignment02
                      orderby c.Creator descending, c.Name descending
                      select c.Name;
 
-            return gr.ToArray();
+            return gr;
         }
 
         public static IEnumerable<string> ListWizardsInReverseOrderLinq(){
@@ -85,7 +85,7 @@ namespace BDSA2020.Assignment02
                      .OrderByDescending(c => (c.Creator, c.Name))
                      .Select(c => c.Name);
 
-            return gr.ToArray();
+            return gr;
         }
     }
 }
