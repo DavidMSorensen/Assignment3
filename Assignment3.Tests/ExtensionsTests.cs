@@ -80,19 +80,17 @@ namespace BDSA2020.Assignment02.Tests
         }
 
         [Fact]
-        public void WordCount_Given_2_words_with_unicode_letters_and_1_word_without_returns_2()
+        public void WordCount_returns_number_of_letters_from_string()
         {
-            //Arrange
-            var input = "these are w@rds";
-            int expected = 2;
+        //Arrange
+        var expected = 9;
+        var _string = "hallo! :(det der 69 er ikke       sjovt 420 mig og dig";
 
-            //Act
-            var actual = input.WordCount();
-
-
-            //Assert
-            Assert.Equal(expected,actual);
+        //Act
+        var actual = _string.WordCount();
+        
+        //Assert
+        Assert.Equal(expected, actual);
         }
-
     }
 }
