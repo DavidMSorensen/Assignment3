@@ -57,7 +57,15 @@ namespace BDSA2020.Assignment02
             return gr;
         }
 
+        public static IEnumerable<(string, int?)> HarryPotterWizardsLinq(){
+            throw new NotImplementedException();
+        }
+
         public static IEnumerable<string> ListWizardsInReverseOrder(){
+            throw new NotImplementedException();
+        }
+
+        public static IEnumerable<string> ListWizardsInReverseOrderLinq(){
             throw new NotImplementedException();
         }
     }
